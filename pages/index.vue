@@ -3,17 +3,27 @@
     <div class="card vimeo-example">
       <div class="card-image">
         <div class="vimeo-example__embed">
-          <vimeo-player ref="player" :video-id="148751763" />
+          <vimeo-player ref="player" :video-id="345654395" :options="vimeoOptions" v-on:play="isPlaying = true" v-on:ended="isPlaying = false" />
         </div>
       </div>
       <div class="card-content">
-        <p>Blah</p>
+        <button v-if="!isPlaying" class="button is-primary" @click="$refs.player.play()">Play</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+export default {
+  data () {
+    return {
+      isPlaying: false,
+      vimeoOptions: {
+        controls: false
+      }
+    }
+  }
+}
 </script>
 
 <style>
@@ -23,8 +33,8 @@
 }
 .vimeo-example__embed {
   position: relative;
-  /* 75% is the height of the video, relative to its width: don't change! */
-  padding: 75% 0 0 0;
+  /* 56% is the height of the video, relative to its width: don't change! */
+  padding: 56% 0 0 0;
 }
 .vimeo-example__embed iframe {
   position: absolute;

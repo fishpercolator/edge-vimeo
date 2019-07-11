@@ -3,7 +3,7 @@
     <div class="card vimeo-example">
       <div class="card-image">
         <div class="vimeo-example__embed">
-          <vimeo-player ref="player" :video-id="345654395" :options="vimeoOptions" v-on:play="isPlaying = true" v-on:ended="isPlaying = false" />
+          <vimeo-player ref="player" :video-id="346437994" :options="vimeoOptions" v-on:play="isPlaying = true" v-on:ended="isPlaying = false" />
         </div>
       </div>
       <div class="card-content">

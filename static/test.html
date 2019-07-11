@@ -1,0 +1,19 @@
+<html>
+<body>
+  <iframe src="https://player.vimeo.com/video/346437994" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <div>
+    <button>Click me</button>
+  </div>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+    var iframe = document.querySelector('iframe');
+    var player = new Vimeo.Player(iframe);
+    var button = document.querySelector('button');
+    button.onclick = function () {
+      player.play();
+    }
+    // player.on('play', function () { button.style.display = 'none'; });
+    // player.on('pause', function () { button.style.display = 'inline'; });
+  </script>  
+</body>
+</html>
